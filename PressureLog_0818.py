@@ -1,7 +1,9 @@
 # receive pressure data frome serial port
 # show it in the consol by pressure bar
 # save data by day
-# by Songlin Li 2020.07.31
+# Using with Pyt_Aun_Talk.ino frameware
+# plot pressure will cause max frequency to 7 data/s (130ms per data)
+# by Songlin Li 2020.08.18
 import time
 import serial
 import sys
