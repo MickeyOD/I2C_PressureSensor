@@ -47,7 +47,7 @@ def DrawPressure(Pre, MaxVal, MinVal, Druation):
 
 
 def main():
-    port = 'COM3'
+    port = 'COM4'
     baudrate = 9600
     ser = serial.Serial(port, baudrate)
     time.sleep(3)  # wait for arduino to reset

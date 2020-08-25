@@ -6,7 +6,7 @@
 void setup()
 { 
   Wire.begin();//Wakes up I2C bus 
-  Wire.setClock(400000L);		// change to 400kHz
+  Wire.setClock(400000L);    // change to 400kHz
   Serial.begin(9600);
 }
 
@@ -27,13 +27,14 @@ void showdata()
   byte *ee = (byte*)p;
   float pressure =0;
   getdata(ee);
-  pressure = (float(raw)-819.15)/491.49*6.8947; // kpa output
+  pressure = (float(raw)-819.15)/147.447*6.8947; // kpa output
   // show data
-  Serial.print("Pressure ");
+  Serial.print(millis());
+  Serial.print(",");
   Serial.print(pressure);
-  Serial.print("kpa \n");
+  Serial.print("\n");
 
-  delay(100); // delay 100ms for another loop
+  delay(20); // delay 100ms for another loop
 }
 
 void loop()
